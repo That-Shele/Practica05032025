@@ -5,6 +5,8 @@ VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practica05032025.AppMVCDataFirst", "Practica05032025.AppMVCDataFirst\Practica05032025.AppMVCDataFirst.csproj", "{26529E0B-B413-4B10-BC67-E1EFF841065B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practica05032025.AppMVCCodeFirst", "Practica05032025.AppMVCCodeFirst\Practica05032025.AppMVCCodeFirst.csproj", "{AEA3887B-2E1D-4D2A-87DA-7D27363FC247}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{26529E0B-B413-4B10-BC67-E1EFF841065B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26529E0B-B413-4B10-BC67-E1EFF841065B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26529E0B-B413-4B10-BC67-E1EFF841065B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEA3887B-2E1D-4D2A-87DA-7D27363FC247}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEA3887B-2E1D-4D2A-87DA-7D27363FC247}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEA3887B-2E1D-4D2A-87DA-7D27363FC247}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEA3887B-2E1D-4D2A-87DA-7D27363FC247}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
