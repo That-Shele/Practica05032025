@@ -1,36 +1,32 @@
 ﻿@model Practica05032025.AppMVCDataFirst.Models.Empleado
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalles";
 }
 
-<h1>Details</h1>
+<h1 class="text-center p-2">@ViewData["Title"]</h1>
 
 <div>
-    <h4>Empleado</h4>
+    <h4>@Html.DisplayFor(model => model.Nombre)</h4>
     <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Nombre)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Nombre)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Puesto)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Puesto)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Telefono)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Telefono)
-        </dd>
-    </dl>
+
+    <div role="tabpanel" class="row p-3">
+        <!-- List group -->
+        <div class="list-group col-4" id="myList" role="tablist">
+            <a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#nombre" role="tab">@Html.DisplayNameFor(model => model.Nombre)</a>
+            <a class="list-group-item list-group-item-acstion" data-bs-toggle="list" href="#pues" role="tab">@Html.DisplayNameFor(model => model.Puesto)</a>
+            <a class="list-group-item list-group-item-acstion" data-bs-toggle="list" href="#tel" role="tab">@Html.DisplayNameFor(model => model.Telefono)</a>
+        </div>
+
+        <!-- Tab panes -->
+        <div class="tab-content col-8 text-center h3">
+            <div class="tab-pane active" id="nombre" role="tabpanel">@Html.DisplayFor(model => model.Nombre)</div>
+            <div class="tab-pane" id="pues" role="tabpanel">@Html.DisplayFor(model => model.Puesto)</div>
+            <div class="tab-pane" id="tel" role="tabpanel">@Html.DisplayFor(model => model.Telefono)</div>
+        </div>
+    </div>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+<div class="row gap-2">
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-warning col-1">Editar</a>
+    <a asp-action="Index" class="btn btn-outline-primary col-1">Volver</a>
 </div>
