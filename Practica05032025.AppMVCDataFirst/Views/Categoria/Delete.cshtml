@@ -1,0 +1,36 @@
+﻿@model Practica05032025.AppMVCDataFirst.Models.Categoria
+
+@{
+    ViewData["Title"] = "Eliminar";
+}
+
+<h1 class="text-center p-2">@ViewData["Title"]</h1>
+
+<h3>Quieres eliminar esto?</h3>
+<hr />
+<div>
+    <div>
+        <h4>@Html.DisplayFor(model => model.Nombre)</h4>
+        <hr />
+
+        <div role="tabpanel" class="row p-3">
+            <!-- List group -->
+            <div class="list-group col-4" id="myList" role="tablist">
+                <a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#nombre" role="tab">@Html.DisplayNameFor(model => model.Nombre)</a>
+                <a class="list-group-item list-group-item-acstion" data-bs-toggle="list" href="#desc" role="tab">@Html.DisplayNameFor(model => model.Descripcion)</a>
+            </div>
+
+            <!-- Tab panes -->
+            <div class="tab-content col-8 text-center h3">
+                <div class="tab-pane active" id="nombre" role="tabpanel">@Html.DisplayFor(model => model.Nombre)</div>
+                <div class="tab-pane" id="desc" role="tabpanel">@Html.DisplayFor(model => model.Descripcion)</div>
+            </div>
+        </div>
+
+    </div>
+    <form asp-action="Delete" class="row gap-2">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Eliminar" class="btn btn-danger col-1" /> 
+        <a asp-action="Index" class="btn btn-outline-primary col-1">Volver</a>
+    </form>
+</div>

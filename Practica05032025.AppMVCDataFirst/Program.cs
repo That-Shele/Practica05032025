@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<CatalogosDbContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("Conn"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Cnn"));
 });
 
 
